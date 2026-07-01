@@ -4,9 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>KelveSec is Live</title>
+  <title>KelvSec - Research Blog </title>
 
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       min-height: 100vh;
@@ -20,24 +24,28 @@
     }
 
     .container {
-      padding: 30px;
+      width: 100%;
+      max-width: 600px;
+      padding: 24px;
     }
 
     .logo {
-      width: 280px;
-      max-width: 80vw;
-      border-radius: 20px;
-      margin-bottom: 20px;
+      display: block;
+      width: clamp(140px, 35vw, 260px);
+      height: auto;
+      margin: 0 auto 24px;
+      border-radius: 18px;
     }
 
     h1 {
-      margin: 0;
-      font-size: 2rem;
+      margin: 0 0 12px;
+      font-size: clamp(1.8rem, 6vw, 2.6rem);
     }
 
     p {
+      margin: 0;
       color: #21f3a3;
-      font-size: 1.2rem;
+      font-size: clamp(1rem, 3.5vw, 1.2rem);
     }
   </style>
 </head>
@@ -46,11 +54,12 @@
   <main class="container">
     <img
       src="images/KelvSec.png"
-      alt="Cartoon hacker logo"
-     >
+      alt="KelvSec logo"
+      class="logo"
+    >
 
-    <h1>The site is live</h1>
-    <p>GitHub Pages is working successfully.</p>
+    <h1>The site is now live. Research coming soon.</h1>
+    <p>Hosted on GitHub pages</p>
   </main>
 </body>
 </html>
