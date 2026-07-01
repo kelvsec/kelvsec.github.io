@@ -2,6 +2,7 @@
 layout: default
 ---
 <article class="shell article">
+  <a class="back-link" href="{{ '/projects/' | relative_url }}">← Back to Projects</a>
   <header class="article-header">
     <p class="eyebrow">Project{% if page.status %} · {{ page.status }}{% endif %}</p>
     <h1>{{ page.title }}</h1>
@@ -16,4 +17,20 @@ layout: default
     {% endif %}
   </header>
   <div class="prose">{{ content }}</div>
+  {% if page.previous or page.next %}
+    <nav class="article-nav" aria-label="More projects">
+      {% if page.previous %}
+        <a class="article-nav-link" href="{{ page.previous.url | relative_url }}">
+          <span>← Previous project</span>
+          <strong>{{ page.previous.title }}</strong>
+        </a>
+      {% endif %}
+      {% if page.next %}
+        <a class="article-nav-link article-nav-next" href="{{ page.next.url | relative_url }}">
+          <span>Next project →</span>
+          <strong>{{ page.next.title }}</strong>
+        </a>
+      {% endif %}
+    </nav>
+  {% endif %}
 </article>

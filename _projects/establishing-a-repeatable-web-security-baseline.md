@@ -2,7 +2,7 @@
 title: Establishing a Repeatable Web Security Baseline
 description: A practical framework for recording and reviewing the visible security posture of a web property.
 date: 2026-07-01 10:00:00 +0100
-status: Project note
+status: Complete
 categories:
   - Web security
 tags:

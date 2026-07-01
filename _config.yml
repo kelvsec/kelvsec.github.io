@@ -19,6 +19,14 @@ collections:
 defaults:
   - scope:
       path: ""
+    values:
+      image:
+        path: /assets/images/kelvsec-social.png
+        width: 1200
+        height: 630
+        alt: KelvSec cybersecurity and technology projects
+  - scope:
+      path: ""
       type: posts
     values:
       layout: post
@@ -31,6 +39,7 @@ defaults:
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-sitemap
 
 feed:
   path: feed.xml

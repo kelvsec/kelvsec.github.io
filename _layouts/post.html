@@ -2,6 +2,7 @@
 layout: default
 ---
 <article class="shell article">
+  <a class="back-link" href="{{ '/blog/' | relative_url }}">← Back to Blog</a>
   <header class="article-header">
     <p class="eyebrow">Blog{% if page.categories.size > 0 %} · {{ page.categories | join: ' / ' }}{% endif %}</p>
     <h1>{{ page.title }}</h1>
@@ -16,5 +17,20 @@ layout: default
     {% endif %}
   </header>
   <div class="prose">{{ content }}</div>
+  {% if page.previous or page.next %}
+    <nav class="article-nav" aria-label="More blog posts">
+      {% if page.previous %}
+        <a class="article-nav-link" href="{{ page.previous.url | relative_url }}">
+          <span>← Previous post</span>
+          <strong>{{ page.previous.title }}</strong>
+        </a>
+      {% endif %}
+      {% if page.next %}
+        <a class="article-nav-link article-nav-next" href="{{ page.next.url | relative_url }}">
+          <span>Next post →</span>
+          <strong>{{ page.next.title }}</strong>
+        </a>
+      {% endif %}
+    </nav>
+  {% endif %}
 </article>
-

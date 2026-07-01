@@ -30,7 +30,7 @@ Create a Markdown file in `_projects`. Its filename becomes its URL under `/proj
 title: Your project title
 description: A concise summary of the project.
 date: 2026-07-01 10:00:00 +0100
-status: Project note
+status: Complete
 categories:
   - Web security
 tags:
@@ -39,6 +39,8 @@ tags:
 ```
 
 Project pages automatically use the project layout and appear on the Projects index.
+
+Suggested project statuses are `In progress`, `Complete` and `Maintained`. Update the `status` value whenever the state of a project changes.
 
 ## Local preview
 
@@ -57,4 +59,5 @@ Open `http://127.0.0.1:4000`. The production custom domain is defined by `CNAME`
 - `_posts` contains dated blog posts.
 - `_projects` contains project articles.
 - `assets/css/kelvsec.css` contains the site styles.
+- `assets/images` contains favicon and social-sharing assets.
 - `index-backup.html` is the preserved pre-Jekyll landing page and is excluded from the generated site.
