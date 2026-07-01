@@ -3,34 +3,55 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Website</title>
+
+  <title>KelveSec is Live</title>
 
   <style>
     body {
       margin: 0;
       min-height: 100vh;
-      display: grid;
-      place-items: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #050816;
+      color: white;
       font-family: Arial, sans-serif;
-      background: #f4f4f4;
-      color: #222;
+      text-align: center;
     }
 
-    main {
-      max-width: 700px;
-      padding: 40px;
-      text-align: center;
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    .container {
+      padding: 30px;
+    }
+
+    .logo {
+      width: 280px;
+      max-width: 80vw;
+      border-radius: 20px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    p {
+      color: #21f3a3;
+      font-size: 1.2rem;
     }
   </style>
 </head>
 
 <body>
-  <main>
-    <h1>KelvSec is live</h1>
-    <p>This website is hosted using GitHub Pages.</p>
+  <main class="container">
+    <img
+      src="images/kelvsec.png"
+      alt="Cartoon hacker logo"
+      class="logo"
+    >
+
+    <h1>The site is live</h1>
+    <p>GitHub Pages is working successfully.</p>
   </main>
 </body>
 </html>
