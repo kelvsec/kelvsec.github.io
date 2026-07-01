@@ -1,0 +1,40 @@
+title: KelvSec
+description: A personal collection of cybersecurity projects, tech experiments and things I have learned along the way.
+url: "https://kelvsec.ie"
+baseurl: ""
+lang: en-IE
+timezone: Europe/Dublin
+permalink: /blog/:title/
+
+author:
+  name: KelvSec
+
+logo: /images/KelvSec.png
+
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout: project
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+feed:
+  path: feed.xml
+
+exclude:
+  - README.md
+  - index-backup.html

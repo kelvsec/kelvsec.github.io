@@ -1,0 +1,20 @@
+---
+layout: default
+---
+<article class="shell article">
+  <header class="article-header">
+    <p class="eyebrow">Blog{% if page.categories.size > 0 %} · {{ page.categories | join: ' / ' }}{% endif %}</p>
+    <h1>{{ page.title }}</h1>
+    {% if page.description %}<p class="lede">{{ page.description }}</p>{% endif %}
+    <div class="article-meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%-d %B %Y' }}</time>
+      <span aria-hidden="true">·</span>
+      <span>{% assign words = content | number_of_words %}{% assign minutes = words | divided_by: 200 %}{% if minutes < 1 %}{% assign minutes = 1 %}{% endif %}{{ minutes }} min read</span>
+    </div>
+    {% if page.tags.size > 0 %}
+      <ul class="tag-list" aria-label="Tags">{% for tag in page.tags %}<li>{{ tag }}</li>{% endfor %}</ul>
+    {% endif %}
+  </header>
+  <div class="prose">{{ content }}</div>
+</article>
+
