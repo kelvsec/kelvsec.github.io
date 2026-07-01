@@ -56,5 +56,5 @@ Open `http://127.0.0.1:4000`. The production custom domain is defined by `CNAME`
 - `_includes` contains the shared header and footer.
 - `_posts` contains dated blog posts.
 - `_projects` contains project articles.
-- `assets/css/style.css` contains the site styles.
+- `assets/css/kelvsec.css` contains the site styles.
 - `index-backup.html` is the preserved pre-Jekyll landing page and is excluded from the generated site.
